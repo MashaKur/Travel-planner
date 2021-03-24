@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="island ">
+      <div class="island__item island__item_flex">
+        <h3 class="m-0">Запланированные путешествия</h3>
+
+        <button class="btn btn-primary ms-auto js-open-filter-form">
+          <svg width="1em" height="1em">
+            <use xlink:href="#filter">
+          </svg>
+        </button>
+        <button class="btn btn-success ms-3 js-open-form ">
+          <svg width="1em" height="1em">
+            <use xlink:href="#plus">
+          </svg>
+        </button>
+
+      </div>
+
+      <form class="island__item island__item_flex island__item_hidden js-filter-form">
+        <input type="search" class="form-control me-2 js-input-search" placeholder="Найти...">
+        
+        <select class="form-select me-2 js-select-sort" >
+          <option value="priority">По температуре</option>
+          <option value="dateTravel">По дате</option>
+        </select>
+
+      </form>
+
+      <form class="island__item island__item_flex island__item_hidden js-form">
+        <input type="text" class="form-control me-2 js-input" placeholder="Куда на этот раз?">
+        <input type="date" class="form-control me-2 js-input-date" placeholder="Введите дату">
+        <select class="form-select me-2 js-select" >
+          <option value="1">Менее тепло</option>
+          <option value="2">Тепло</option>
+          <option value="3">Очень тепло</option>
+
+        </select>
+
+        <button type="button" class="btn btn-light me-2 js-add-item">Добавить</button>
+        <button type="button" class="btn btn-secondary js-close-form">Отмена</button>
+      </form>
+
+      <div class="island__item js-list-wrap">
+        <div class="fallback-list">Пока ничего не запланировано(</div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="d-none">
+    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </svg>
+    <svg id="plus" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+      <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+    </svg>
+    <svg id="filter" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-filter-square-fill" viewBox="0 0 16 16">
+      <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm.5 5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1 0-1zM4 8.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm2 3a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+  </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
