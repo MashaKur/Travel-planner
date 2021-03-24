@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    
+    
+  }
+
+  .island {
+    max-width: 60%;
+    margin: 50px auto ;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.788);
+  }
+  
+  .island__item {
+    padding: 16px;
+    
+  }
+
+  .island__item_flex {
+    display: flex;
+    align-items: center;
+    
+  }
+
+  .island__item_hidden {
+    display: none;
+  }
+
+  .island__item + .island__item {
+    border-top: 1px solid rgba(34, 34, 34, 10%);
+  }
+
+  .fallback-list {
+    display: none;
+  }
+
+  .fallback-list:first-child:last-child {
+    display: block;
+  }
+
+  .list{
+    width: 100%;
+  }
+  
+  .list__item {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 10px 0 ;
+    align-items: center;
+    
+  }
+  span {
+    font-size: 15px;
+    vertical-align: auto;
+  }
